@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>State of Idaho</title>
+</head>
+
+<body id="state-container">
+	<header>
+		<nav class="nav-bar">
+			<a href="index.html"><img class="state-logo" src="images/logo.png" alt="Idaho State Logo"></a>
+			<div>
+				<a href="boise.html">Boise</a>
+				<a class="nav-link" href="meridian.html">Meridian</a>
+				<a href="nampa.html">Nampa</a>
+			</div>
+		</nav>
+	</header>
+
+	<main class="home-container">
+		<section class="state-intro-container">
+			<div class="state-intro">
+				<p>Welcome to the offical website of Idaho<br>Home to the great outdoors
+				</p>
+			</div>
+			<form class="contact-form">
+				<p>Wish to contact us? Submit a question here!</p>
+				<div>
+					<label for="firstName">First Name</label>
+					<input id="firstName" type="text" maxlength="30" minlength="2" placeholder="First Name">
+					<label for="lastName">Last Name</label>
+					<input id="lastName" type="text" maxlength="30" minlength="2" placeholder="Last Name">
+				</div>
+				<div>
+					<p id="emailInfo"></p>
+					<label for="email">Email Address</label>
+					<input id="email" type="email" maxlength="50" placeholder="Email">
+					<label for="confirmEmail">Confirm Email Address</label>
+					<input id="confirmEmail" type="email" maxlength="50" placeholder="Confirm Email">
+				</div>
+				<textarea name="question" id="" cols="30" rows="10" placeholder="Ask your question here!"></textarea>
+			</form>
+		</section>
+		<aside class="state-list">
+			<p>Take a glance at Idaho's great cities</p>
+			<ol id="city-list">
+				<li class="city-list-container">
+					<a class="city-link" href="boise.html">
+						<img class="city-link-image"
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Idaho_Capitol_Building.JPG/1920px-Idaho_Capitol_Building.JPG"
+							alt="Boise Capital Building">
+						Boise, Capitol of Idaho
+					</a>
+				</li>
+				<li class="city-list-container">
+					<a class="city-link" href="#">
+						<img class="city-link-image"
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Meridian-idaho-usa-city-hall.jpg/1280px-Meridian-idaho-usa-city-hall.jpg"
+							alt="Meridian City Hall">
+						Meridian, Fastest Growing City
+					</a>
+				</li>
+				<li class="city-list-container">
+					<a class="city-link" href="#">
+						<img class="city-link-image"
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Nampa_Historic_District.jpg/1920px-Nampa_Historic_District.jpg"
+							alt="1st Street in Nampa, Idaho">
+						Nampa, Idaho's Third Largest City
+					</a>
+				</li>
+			</ol>
+		</aside>
+	</main>
+
+	<script>
+		let message = document.getElementById('emailInfo');
+		let email = document.getElementById('email');
+		let confirmEmail = document.getElementById('confirmEmail');
+
+		confirmEmail.addEventListener("input", validate);
+		email.addEventListener("input", validate);
+
+		function validate() {
+			if (email.value == "") {
+				message.innerText = ""
+			}
+			else if (confirmEmail.value.toLowerCase() == email.value.toLowerCase()) {
+				message.innerText = "Emails Match"
+				message.className = 'matching'
+			}
+			else {
+				message.innerText = "Ensure that emails match"
+				message.className = 'not-matching'
+			}
+		}
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+body {
+	margin: 0;
+	font-family: "Inter", system-ui;
+}
+
+/* State Styles */
+#state-container {
+	background-image: url("https://images.unsplash.com/photo-1665321756420-f10a79fb5444?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+	background-size: cover;
+}
+
+.nav-bar {
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.85);
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 5rem;
+}
+
+.opaque {
+	background-color: rgb(20, 20, 20);
+}
+
+.nav-bar a {
+	color: white;
+	font-size: 1.5rem;
+	text-decoration: none;
+	transition: all 0.15s;
+}
+
+.nav-bar a:hover {
+	color: rgb(82, 82, 252);
+}
+
+.state-logo {
+	width: 100px;
+}
+
+.state-intro-container {
+	width: 70%;
+	margin-right: 3rem;
+}
+
+.state-intro {
+	font-size: 3rem;
+	background-color: rgba(0, 0, 0, 0.85);
+	color: white;
+	text-align: center;
+	padding: 2rem;
+	border-radius: 1rem;
+}
+
+.home-container {
+	display: flex;
+	padding: 3rem;
+}
+
+.city-link-image {
+	width: 20rem;
+	object-fit: cover;
+	float: right;
+	border-radius: 1rem;
+}
+
+.city-link {
+	font-size: 1.5rem;
+	color: white;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.city-link:hover {
+	color: blue;
+}
+
+#city-list {
+	padding: 0 2.5rem;
+	font-size: 1.5rem;
+}
+
+.state-list {
+	background-color: rgba(0, 0, 0, 0.55);
+	color: white;
+	font-size: 2rem;
+	padding: 0 2rem;
+	border-radius: 0.5rem;
+}
+
+.city-list-container {
+	height: 20rem;
+}
+
+.matching {
+	color: green;
+}
+
+.not-matching {
+	color: red;
+}
+
+.contact-form {
+	margin: 2rem 0;
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(0, 0, 0, 0.65);
+	padding: 2rem;
+	border-radius: 0.2rem;
+	font-size: 1.3rem;
+	color: white;
+}
+
+.contact-form textarea {
+	margin: 1.2rem 0;
+	width: 90%;
+}
+
+.nav-link {
+	margin: 0 2rem;
+}
+
+/* City Styles */
+.city-image-container {
+	position: relative;
+	width: 100%;
+	height: 40vh;
+}
+
+#boise-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 0 25%;
+}
+
+.city-absolute-text {
+	margin: 0;
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	color: rgb(255, 255, 255);
+	font-size: 5rem;
+	text-shadow: -3px 3px 3px rgb(0, 0, 0);
+}
+
+.city-intro {
+	font-size: 1.3rem;
+	color: black;
+}
+
+.city-info-container {
+	display: flex;
+	width: 70vw;
+	justify-content: center;
+	margin: 2rem auto;
+}
+
+.city-links-container {
+	margin-right: 2rem;
+}
+
+.city-links-header {
+	font-size: 1.5rem;
+	background-color: #3b66b0;
+	color: white;
+	font-weight: bold;
+	padding: 0.25rem 1rem;
+	border-radius: .2rem;
+	margin-bottom: 0.2rem
+}
+
+.city-links {
+	padding: 0;
+}
+
+.city-links li {
+	list-style-type: none;
+	margin: 0.75rem 0;
+	padding-left: 5px;
+	font-size: 1.3rem;
+}
+
+.city-right-container {
+	width: 70%;
+}
+
+td,
+th {
+	border: 1px solid;
+	padding: 0.5rem 0.25rem;
+	font-size: 1.15rem;
+	color: black;
+}
